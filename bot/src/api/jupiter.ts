@@ -1,57 +1,7 @@
 import axios from 'axios';
+import { JupiterToken } from '../types/entities/token';
 
 const JUPITER_BASE_URL = 'https://lite-api.jup.ag/tokens/v2/';
-
-export interface JupiterToken {
-    id: string; // mint address
-    name: string;
-    symbol: string;
-    icon: string | null;
-    decimals: number;
-    twitter?: string;
-    telegram?: string;
-    website?: string;
-    dev?: string;
-    circSupply?: number;
-    totalSupply?: number;
-    holderCount?: number;
-    fdv?: number; // fully diluted valuation
-    mcap?: number; // market cap
-    usdPrice?: number;
-    liquidity?: number;
-    stats5m?: SwapStats;
-    stats1h?: SwapStats;
-    stats6h?: SwapStats;
-    stats24h?: SwapStats;
-    audit?: {
-        isSus?: boolean;
-        mintAuthorityDisabled?: boolean;
-        freezeAuthorityDisabled?: boolean;
-        topHoldersPercentage?: number;
-        devBalancePercentage?: number;
-        devMigrations?: number;
-    };
-    organicScore?: number;
-    organicScoreLabel?: 'high' | 'medium' | 'low';
-    isVerified?: boolean;
-    updatedAt: string;
-}
-
-export interface SwapStats {
-    priceChange?: number;
-    holderChange?: number;
-    liquidityChange?: number;
-    volumeChange?: number;
-    buyVolume?: number;
-    sellVolume?: number;
-    buyOrganicVolume?: number;
-    sellOrganicVolume?: number;
-    numBuys?: number;
-    numSells?: number;
-    numTraders?: number;
-    numOrganicBuyers?: number;
-    numNetBuyers?: number;
-}
 
 export class JupiterClient {
     private baseUrl: string;
