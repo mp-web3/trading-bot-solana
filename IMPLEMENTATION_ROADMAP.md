@@ -57,15 +57,13 @@ This trading bot is designed to identify and trade profitable Solana memecoins b
 
 ### Free Tier Resources
 
-| Resource        | Cost | Limit              | Use Case                         |
-| --------------- | ---- | ------------------ | -------------------------------- |
-| Jupiter API     | Free | Rate limited       | Token discovery, recent launches |
-| DexScreener API | Free | Generous limits    | Liquidity, volume, price data    |
-| Helius Free     | Free | 100k credits/month | RPC calls, token metadata        |
-| SolScan API     | Free | Rate limited       | Holder data, transactions        |
-| Birdeye Public  | Free | Basic tier         | Token overview, price history    |
-| SQLite          | Free | Unlimited          | Local database for development   |
-| Paper Trading   | Free | Unlimited          | Strategy validation              |
+| Resource      | Cost     | Limit              | Use Case                           |
+| ------------- | -------- | ------------------ | ---------------------------------- |
+| SolanaTracker | Variable | See pricing        | Token data, risk, wallets, traders |
+| Helius Free   | Free     | 100k credits/month | RPC calls, token metadata          |
+| SolScan API   | Free     | Rate limited       | Holder data, transactions          |
+| SQLite        | Free     | Unlimited          | Local database for development     |
+| Paper Trading | Free     | Unlimited          | Strategy validation                |
 
 ### Graduation Path
 ```
@@ -236,14 +234,6 @@ export class SolscanClient {
 **Sign Up:** https://www.helius.dev/pricing
 
 ---
-
-### 5. Birdeye API (Optional, Public Endpoints)
-**Provides:**
-- Token overview
-- Price history
-- Market data
-
-**Note:** Has free public endpoints with limitations
 
 ---
 
@@ -2387,7 +2377,6 @@ interface DailyRiskLimits {
 
 ### Tools to Explore
 - Solscan (blockchain explorer)
-- Birdeye (token analytics)
 - DexTools (trading view)
 - TradingView (charting)
 

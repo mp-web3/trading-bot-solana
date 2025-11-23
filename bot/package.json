@@ -1,7 +1,7 @@
 {
-  "name": "birdeye-trading-bot",
+  "name": "solana-trading-bot",
   "version": "1.0.0",
-  "description": "Solana meme token trading bot",
+  "description": "Solana meme token trading bot using SolanaTracker",
   "main": "dist/index.js",
   "packageManager": "yarn@4.9.2",
   "scripts": {
@@ -26,7 +26,8 @@
     "solana",
     "trading-bot",
     "defi",
-    "birdeye"
+    "solanatracker",
+    "memecoins"
   ],
   "author": "",
   "license": "MIT"

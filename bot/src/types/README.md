@@ -294,16 +294,15 @@ if (token.holders.smartMoney.count >= 3) {
 
 Example:
 ```typescript
-// types/api/birdeye.ts
-export interface BirdeyeTokenResponse {
+// types/api/newsource.ts
+export interface NewSourceTokenResponse {
   // ... API response shape
 }
 
 // services/mappers/token-mapper.ts
 static fromMultipleSources(
   stToken: SolanaTrackerToken,
-  jupiterData?: JupiterTokenResponse,
-  birdeyeData?: BirdeyeTokenResponse  // New source!
+  newSourceData?: NewSourceTokenResponse
 ): Token {
   // ... merge data
 }
