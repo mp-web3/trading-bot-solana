@@ -1,0 +1,51 @@
+# Environment
+shared/.env
+.env
+*.env.local
+
+# TypeScript / Node
+bot/node_modules/
+bot/dist/
+bot/.env
+
+# Python
+analysis/__pycache__/
+analysis/*.pyc
+analysis/.ipynb_checkpoints/
+analysis/venv/
+analysis/.env
+*.pyc
+__pycache__/
+
+# Data
+data/trades/*.json
+data/logs/*.log
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+node_modules/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

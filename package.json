@@ -1,0 +1,26 @@
+{
+  "name": "birdeye-trading-bot",
+  "version": "1.0.0",
+  "description": "Solana meme token trading bot with data analysis",
+  "private": true,
+  "scripts": {
+    "bot": "cd bot && yarn dev",
+    "bot:build": "cd bot && yarn build",
+    "bot:start": "cd bot && yarn start",
+    "analyze": "cd analysis && python data_analyzer.py",
+    "notebook": "cd analysis && jupyter notebook",
+    "setup": "yarn setup:bot && yarn setup:py",
+    "setup:bot": "cd bot && yarn install",
+    "setup:py": "cd analysis && pip install -r requirements.txt"
+  },
+  "keywords": [
+    "solana",
+    "trading-bot",
+    "defi",
+    "birdeye",
+    "meme-tokens"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
