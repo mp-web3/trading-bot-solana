@@ -62,41 +62,14 @@ export class JupiterClient {
 
     /**
      * Fetch recently created tokens (new launches)
-     * Note: The /recent endpoint requires authentication, so we'll fetch all and filter
+     * Returns up to 30 tokens that recently had their first pool created
      */
     async getRecentTokens(): Promise<JupiterToken[]> {
         try {
-            // Use the free /all endpoint and filter for recent tokens
-            const allTokens = await this.getAllTokens();
-
-            // Filter for tokens created in the last 24 hours
-            const oneDayAgo = new Date();
-            oneDayAgo.setDate(oneDayAgo.getDate() - 1);
-
-            return allTokens
-                .filter(token => {
-                    if (token.updatedAt) {
-                        const tokenDate = new Date(token.updatedAt);
-                        return tokenDate > oneDayAgo;
-                    }
-                    return false;
-                })
-                .slice(0, 100); // Limit to 100 recent tokens
-        } catch (error: any) {
-            console.error('Error fetching recent tokens:', error.message);
-            throw error;
-        }
-    }
-
-    /**
-     * Fetch all tokens
-     */
-    async getAllTokens(): Promise<JupiterToken[]> {
-        try {
-            const response = await axios.get(`${this.baseUrl}/all`);
+            const response = await axios.get(`${this.baseUrl}recent`);
             return response.data;
         } catch (error: any) {
-            console.error('Error fetching all tokens:', error.message);
+            console.error('Error fetching recent tokens:', error.message);
             throw error;
         }
     }
